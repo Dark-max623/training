@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: #fff;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 80px;
+
+    background: #E3E6F3;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header .logo {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#hero {
+    background-image: url("img/hero.png");
+
+    height: 90vh;
+    width: 100%;
+
+    background-size: cover;
+    background-position: top 10% right 0;
+
+    padding: 0 80px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h1 {
+    color: #088178;
+}
+
+#hero button {
+    background-color: transparent;
+    color: #088178;
+
+    border: 0;
+
+    padding: 14px 80px 14px 65px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FEATURE BOXES
+========================= */
+
+#feature {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 40px 80px;
+
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 150px;
+    height: 180px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    border: 1px solid #ccefd0;
+    border-radius: 10px;
+
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+#feature .fe-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+#feature .fe-box img {
+    width: 100px;
+    height: 110px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    margin: 0;
+
+    padding: 8px 10px;
+
+    font-size: 14px;
+
+    color: #088178;
+
+    background-color: #fddde4;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+#product1 {
+    text-align: center;
+
+    padding: 50px 80px;
+}
+
+#product1 h2 {
+    margin-bottom: 5px;
+}
+
+#product1 > p {
+    margin-bottom: 30px;
+}
+
+
+/* PRODUCT GRID */
+
+#product1 .pro-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-top: 10px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+#product1 .pro {
+    width: 100%;
+
+    min-height: 430px;
+
+    padding: 12px;
+
+    background: #fff;
+
+    border: 1px solid #cce7d0;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* CARD HOVER */
+
+#product1 .pro:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+    border-color: #088178;
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+#product1 .pro > img {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: #f8f8f8;
+
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+#product1 .pro:hover > img {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   PRODUCT DESCRIPTION
+========================= */
+
+#product1 .pro .des {
+    padding: 14px 5px 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    text-align: left;
+}
+
+
+/* CATEGORY */
+
+#product1 .pro .des span {
+    color: #606063;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+/* PRODUCT NAME */
+
+#product1 .pro .des h5 {
+    padding-top: 5px;
+
+    color: #1a1a1a;
+
+    font-size: 15px;
+
+    line-height: 20px;
+
+    min-height: 40px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+#product1 .pro .des i {
+    font-size: 12px;
+
+    color: rgb(243, 181, 25);
+
+    margin-right: 1px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+#product1 .pro .des h4 {
+    padding-top: 8px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #088178;
+
+    margin-top: auto;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    #header {
+        padding: 15px 40px;
+    }
+
+    #hero {
+        padding-left: 40px;
+    }
+
+    #product1 {
+        padding: 40px;
+    }
+
+    #product1 .pro-container {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+    #product1 .pro > img {
+        height: 250px;
+    }
+}
+
+
+/* =========================
+   SMALL TABLETS / MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #header {
+        padding: 15px 25px;
+    }
+
+    #navbar li {
+        padding: 0 10px;
+    }
+
+    #navbar li a {
+        font-size: 14px;
+    }
+
+    #hero {
+        height: 70vh;
+
+        padding: 0 25px 15px;
+
+        background-position: center;
+    }
+
+    #hero h1 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    #hero h2 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    #feature {
+        padding: 30px 20px;
+
+        gap: 12px;
+    }
+
+    #feature .fe-box {
+        width: 135px;
+        height: 165px;
+    }
+
+    #product1 {
+        padding: 40px 20px;
+    }
+
+    #product1 h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #product1 .pro-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    #product1 .pro {
+        min-height: 390px;
+
+        padding: 9px;
+    }
+
+    #product1 .pro > img {
+        height: 210px;
+    }
+
+    #product1 .pro .des {
+        padding: 10px 3px 3px;
+    }
+
+    #product1 .pro .des h5 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    #header {
+        padding: 12px 15px;
+    }
+
+    #header .logo {
+        width: 70px;
+    }
+
+    #navbar li {
+        padding: 0 6px;
+    }
+
+    #navbar li a {
+        font-size: 12px;
+    }
+
+    #hero {
+        height: 65vh;
+
+        padding: 0 20px;
+
+        background-position: center;
+    }
+
+    #hero h4 {
+        font-size: 15px;
+    }
+
+    #hero h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #hero p {
+        font-size: 13px;
+    }
+
+    #feature {
+        padding: 25px 10px;
+
+        gap: 10px;
+    }
+
+    #feature .fe-box {
+        width: 120px;
+        height: 155px;
+    }
+
+    #feature .fe-box img {
+        width: 85px;
+        height: 95px;
+    }
+
+    #feature .fe-box h6 {
+        font-size: 12px;
+    }
+
+    #product1 {
+        padding: 30px 10px;
+    }
+
+    #product1 h2 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    #product1 > p {
+        font-size: 13px;
+    }
+
+    #product1 .pro-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    #product1 .pro {
+        min-height: 350px;
+
+        padding: 7px;
+
+        border-radius: 12px;
+    }
+
+    #product1 .pro > img {
+        height: 175px;
+
+        border-radius: 9px;
+    }
+
+    #product1 .pro .des span {
+        font-size: 10px;
+    }
+
+    #product1 .pro .des h5 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    #product1 .pro .des i {
+        font-size: 10px;
+    }
+
+    #product1 .pro .des h4 {
+        font-size: 14px;
+    }
+}
