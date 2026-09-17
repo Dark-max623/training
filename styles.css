@@ -255,7 +255,7 @@ p {
 }
 
 
-/* =========================
+/* ========================
    PRODUCT CARD
 ========================= */
 
@@ -625,4 +625,91 @@ p {
     #product1 .pro .des h4 {
         font-size: 14px;
     }
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/banner.png);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+}
+#banner h4{
+    color: #fff;
+    font-size: 36px;
+    padding: 10px 0;
+}
+
+#banner h2 span{
+    color: #ef3636;
+}
+
+#banner button:hover{
+    background: #088178;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+}
+
+#sm-banner .banner-box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(img/smallbanner1.png);
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(img/smallbanner2.png);
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 5px;
+}
+#sm-banner .banner-box1 h2{
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+#sm-banner .banner-box1 h4{
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+#sm-banner .banner-box1 span{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+#sm-banner .banner-box1 button{
+    border-radius: 4px;
+    background-color: orangered;
+}
+
+#sm-banner .banner-box1 button:hover{
+    transform: translate(-5px);
+    color: #088178;
 }
